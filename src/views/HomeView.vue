@@ -12,6 +12,8 @@
       </div>
     </section>
 
+    <p>halllaaaaa; {{ testingEnv }}</p>
+
     <!-- 3 Cards in center of cards -->
     <section class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -72,4 +74,6 @@
     { name: 'Partners', description: 'Partners description', path: '/partner' },
     { name: 'Resources', description: 'Resources description', path: '/resources' },
   ]);
+
+  const testingEnv = import.meta.env.VITE_ETTER_ELLER_ANNA;
 </script>
