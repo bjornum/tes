@@ -43,10 +43,7 @@
 
     <!-- Info Text -->
     <section class="container mx-auto px-4 w-1/4">
-      <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal text-2xl">
-        The projectTemplate project aims to Lorem Ipsum Dolores Bla Bla Bla. The concept should
-        enable projectTemplate to do even more Lorem Ipsum!
-      </p>
+      <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal text-2xl">{{ shortText }}</p>
     </section>
 
     <!-- Import News Module here -->
@@ -65,6 +62,10 @@
 
   const projectName = ref('projectTemplate');
   const dividerColorArray = ref(['#205072', '#329D9C', '#D83636', '#DD9A30']);
+  const shortText = ref(`
+  The projectTemplate project aims to Lorem Ipsum Dolores Bla Bla Bla. The concept should
+  enable projectTemplate to do even more Lorem Ipsum!
+  `);
 
   const testArray = ref([
     { name: 'About', description: 'About description', path: '/about' },
