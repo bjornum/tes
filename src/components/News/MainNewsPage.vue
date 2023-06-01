@@ -1,14 +1,32 @@
 <template>
   <main>
     <!-- Iterate all the News Cards inside here -->
+    <pre>{{ newsData }}</pre>
   </main>
 </template>
 
 <script setup>
   import { defineAsyncComponent, ref } from 'vue';
+  import axios from 'axios';
 
   // Get the data from the API
   const newsData = ref([]);
+
+  const tenant = ref(import.meta.env.VITE_TENANT_ID);
+
+  const getAllNews = async () => {
+    try {
+      const response = await axios.get(
+        `resource_management/news?mode=getpublicnews&tenant_id=${tenant.value}`
+      );
+      console.log(response.data);
+      newsData.value = response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  getAllNews();
 
   /* To Do 
   1. Check the page it is on (Home or News)

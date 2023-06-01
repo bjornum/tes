@@ -12,8 +12,6 @@
       </div>
     </section>
 
-    <p>halllaaaaa; {{ testingEnv }}</p>
-
     <!-- 3 Cards in center of cards -->
     <section class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -49,7 +47,9 @@
     </section>
 
     <!-- Import News Module here -->
-    <section></section>
+    <section>
+      <NewsModule />
+    </section>
 
     <!-- See all news button - go to page - make it within the News Module, aka display once news got content -->
     <section></section>
@@ -61,6 +61,7 @@
 
 <script setup>
   import { ref } from 'vue';
+  import NewsModule from '@/components/News/MainNewsPage.vue';
 
   const projectName = ref('projectTemplate');
   const dividerColorArray = ref(['#205072', '#329D9C', '#D83636', '#DD9A30']);
@@ -74,6 +75,4 @@
     { name: 'Partners', description: 'Partners description', path: '/partner' },
     { name: 'Resources', description: 'Resources description', path: '/resources' },
   ]);
-
-  const testingEnv = import.meta.env.VITE_ETTER_ELLER_ANNA;
 </script>
