@@ -23,16 +23,15 @@
             >
               <div :style="{ backgroundColor: dividerColorArray[index] }" class="p-[2px]"></div>
               <div>
-                <div class="grid grid-cols-9 gap-2">
+                <div class="grid grid-cols-9 gap-2 p-7">
                   <div class="col-span-9">
-                    <p class="pt-2 pageCardTitle">{{ item.name }}</p>
+                    <p class="pt-2 text-3xl">{{ item.name }}</p>
                   </div>
                   <div class="col-span-2 pl-0">
-                    <!-- <i class="text-2xl pt-2 pageCardArrow">mdi-arrow-right</i> -->
-                    <i class="text-2xl pt-2 text-[#205072] mdi mdi-arrow-right"></i>
+                    <i class="text-5xl pt-2 text-[#205072] mdi mdi-arrow-right"></i>
                   </div>
                   <div class="col-span-12 pa-0 px-2">
-                    <p class="pageCardDescription">{{ item.description }}</p>
+                    <p class="text-1xl">{{ item.description }}</p>
                   </div>
                 </div>
               </div>
@@ -43,8 +42,8 @@
     </section>
 
     <!-- Info Text -->
-    <section class="container mx-auto px-4">
-      <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal">
+    <section class="container mx-auto px-4 w-1/4">
+      <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal text-2xl">
         The projectTemplate project aims to Lorem Ipsum Dolores Bla Bla Bla. The concept should
         enable projectTemplate to do even more Lorem Ipsum!
       </p>
