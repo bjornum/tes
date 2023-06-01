@@ -1,12 +1,11 @@
 <template>
   <h1 className="text-3xl font-bold underline">
-    <h1>{{ pageTitle }}</h1>
-    <p>{{ $t('greetings') }}</p>
+    <p>{{ pageTitle }}</p>
   </h1>
 </template>
 
 <script setup>
   import { ref } from 'vue';
 
-  const pageTitle = ref('Home');
+  const pageTitle = ref('News');
 </script>
