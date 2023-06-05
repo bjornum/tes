@@ -92,3 +92,8 @@ npm run build
 <h2 align="center">ChangeLog / Other</h2>
 <p>05/06/2023: Updated README, planning the template issues further. </p>
 <p>**05/06/2023**: News Module now get data from API, displays it into clickable cards, opening a modale</p>
+
+<br/>
+<br/>
+
+![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.g
