@@ -4,10 +4,10 @@
     <section>
       <div class="card w-5/6 rounded-none text-grayText shadow-md mx-auto bg-gray-300 h-[600px]">
         <p class="text-[36px] md:text-[48px] mt-[35%] md:mt-[20%] text-[white] ml-[15%]">
-          Welcome to {{ projectName }} Project
+          {{ $t('homePage.mainTitle') }}
         </p>
         <p class="text-[18px] md:text-[28px] text-[#434343;] ml-[15%] font-bold">
-          Sub page Title Comment
+          {{ $t('homePage.mainDescription') }}
         </p>
       </div>
     </section>
@@ -41,9 +41,13 @@
       </div>
     </section>
 
+    <p>{{ name }}</p>
+
     <!-- Info Text -->
-    <section class="container mx-auto px-4 w-1/4">
-      <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal text-2xl">{{ shortText }}</p>
+    <section class="container mx-auto px-4 w-1/4 mb-10">
+      <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal text-2xl">
+        {{ $t('homePage.smallText') }}
+      </p>
     </section>
 
     <!-- Import News Module here -->
@@ -60,19 +64,23 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, inject } from 'vue';
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
+
   import NewsModule from '@/components/News/MainNewsPage.vue';
 
-  const projectName = ref('projectTemplate');
   const dividerColorArray = ref(['#205072', '#329D9C', '#D83636', '#DD9A30']);
-  const shortText = ref(`
-  The projectTemplate project aims to Lorem Ipsum Dolores Bla Bla Bla. The concept should
-  enable projectTemplate to do even more Lorem Ipsum!
-  `);
 
   const testArray = ref([
-    { name: 'About', description: 'About description', path: '/about' },
-    { name: 'Partners', description: 'Partners description', path: '/partner' },
+    { name: '', description: 'About description', path: '/about' },
+    { name: 'Partners', description: 'Partners description', path: '/news' },
     { name: 'Resources', description: 'Resources description', path: '/resources' },
   ]);
+
+  // const mainDescription = ref('This is a test');
+
+  // testArray.value[0].name = mainDescription.value;
+
+  testArray.value[0].name = t('homePage.mainDescription');
 </script>

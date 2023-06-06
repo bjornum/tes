@@ -1,3 +1,11 @@
 {
-  "greetings": "Hello World!"
+  "projectDetails": {
+    "projectName": "Vue 3 Template",
+    "projectDescription": ""
+  },
+  "homePage": {
+    "mainTitle": "Welcome to Vue 3 Template",
+    "mainDescription": "Sub Page Title Comment",
+    "smallText": "The projectName aims to Lorem Ipsum Dolores Bla Bla Bla. The Concept should enable projectName to do even more Lorem Ipsum!"
+  }
 }

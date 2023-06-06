@@ -30,6 +30,9 @@
           </ul>
         </div>
       </div>
+
+      <!-- News Modal -->
+      <!-- <NewsDialog /> -->
       <!-- Page content here -->
       <RouterView />
     </div>
@@ -46,4 +49,5 @@
 
 <script setup>
   import { RouterLink, RouterView } from 'vue-router';
+  import NewsDialog from './components/News/NewsDialog.vue';
 </script>

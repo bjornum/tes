@@ -23,6 +23,7 @@ axios.defaults.headers.patch['Content-Type'] = 'application/json';
 
 const i18n = createI18n({
   locale: localStorage.getItem('locale') || 'en',
+  legacy: false,
   messages,
 });
 
