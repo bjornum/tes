@@ -1,6 +1,6 @@
 {
   "projectSettings": {
-    "navbar": {
+    "navbarSettings": {
       "displayLogo": "true",
       "home": "true",
       "about": "true",
@@ -11,7 +11,7 @@
       "contact": "true",
       "languageChanger": "true"
     },
-    "modules": {
+    "moduleSettings": {
       "home": "true",
       "about": "true",
       "partner": "true",

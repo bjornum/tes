@@ -1,6 +1,6 @@
 {
   "projectSettings": {
-    "navbar": {
+    "navbarSettings": {
       "displayLogo": "true",
       "home": "true",
       "about": "true",

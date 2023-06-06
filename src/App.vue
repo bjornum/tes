@@ -128,13 +128,13 @@
   /* =====  Navbar Settings ===== */
 
   // Show Project Logo or Project Name
-  const showImage = t('projectSettings.navbar.displayLogo');
+  const showImage = t('projectSettings.navbarSettings.displayLogo');
   // Display Links in Navbar
-  const displayHome = t('projectSettings.navbar.home');
-  const displayAbout = t('projectSettings.navbar.about');
-  const displayPartner = t('projectSettings.navbar.partner');
-  const displayNews = t('projectSettings.navbar.news');
-  const displayTraining = t('projectSettings.navbar.training');
-  const displayResources = t('projectSettings.navbar.resources');
-  const displayContact = t('projectSettings.navbar.contact');
+  const displayHome = t('projectSettings.navbarSettings.home');
+  const displayAbout = t('projectSettings.navbarSettings.about');
+  const displayPartner = t('projectSettings.navbarSettings.partner');
+  const displayNews = t('projectSettings.navbarSettings.news');
+  const displayTraining = t('projectSettings.navbarSettings.training');
+  const displayResources = t('projectSettings.navbarSettings.resources');
+  const displayContact = t('projectSettings.navbarSettings.contact');
 </script>
