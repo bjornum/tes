@@ -41,30 +41,30 @@
         <div class="flex-auto hidden lg:block">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
-            <li>
+            <li v-if="displayHome == 'true'">
               <router-link to="/">{{ $t('projectRoutes.home') }}</router-link>
             </li>
-            <li>
+            <li v-if="displayAbout == 'true'">
               <router-link to="/about">{{ $t('projectRoutes.about') }}</router-link>
             </li>
-            <li>
+            <li v-if="displayPartner == 'true'">
               <router-link to="/partners">{{ $t('projectRoutes.partner') }}</router-link>
             </li>
-            <li>
+            <li v-if="displayNews == 'true'">
               <router-link to="/news">{{ $t('projectRoutes.news') }}</router-link>
             </li>
-            <li>
+            <li v-if="displayTraining == 'true'">
               <router-link to="/training">{{ $t('projectRoutes.training') }}</router-link>
             </li>
-            <li>
+            <li v-if="displayResources == 'true'">
               <router-link to="/resources">{{ $t('projectRoutes.resources') }}</router-link>
             </li>
-            <li>
+            <li v-if="displayContact == 'true'">
               <a>{{ $t('projectRoutes.contact') }}</a>
             </li>
           </ul>
         </div>
-        <div class="flex-none hidden lg:block mr-10">Change</div>
+        <div v-if="languageChanger == 'true'" class="flex-none hidden lg:block mr-10">Change</div>
       </nav>
 
       <!-- Page content here -->
@@ -90,30 +90,30 @@
 
         <!-- Project Navigation -->
         <section>
-          <li>
+          <li v-if="displayHome == 'true'">
             <router-link to="/">{{ $t('projectRoutes.home') }}</router-link>
           </li>
-          <li>
+          <li v-if="displayAbout == 'true'">
             <router-link to="/about">{{ $t('projectRoutes.about') }}</router-link>
           </li>
-          <li>
+          <li v-if="displayPartner == 'true'">
             <router-link to="/partners">{{ $t('projectRoutes.partner') }}</router-link>
           </li>
-          <li>
+          <li v-if="displayNews == 'true'">
             <router-link to="/news">{{ $t('projectRoutes.news') }}</router-link>
           </li>
-          <li>
+          <li v-if="displayTraining == 'true'">
             <router-link to="/training">{{ $t('projectRoutes.training') }}</router-link>
           </li>
-          <li>
+          <li v-if="displayResources == 'true'">
             <router-link to="/resources">{{ $t('projectRoutes.resources') }}</router-link>
           </li>
-          <li>
+          <li v-if="displayContact == 'true'">
             <a>{{ $t('projectRoutes.contact') }}</a>
           </li>
         </section>
 
-        <div class="flex-none hidden lg:block mr-10">Change</div>
+        <div v-if="languageChanger == 'true'" class="flex-none hidden lg:block mr-10">Change</div>
       </ul>
     </nav>
   </nav>
@@ -127,5 +127,15 @@
   import { useI18n } from 'vue-i18n';
   const { t } = useI18n();
 
-  const showImage = t('projectSettings.displayLogo');
+  /* =====  Navbar Settings ===== */
+  // Show Project Logo or Project Name
+  const showImage = t('projectSettings.navbar.displayLogo');
+  // Display Links in Navbar
+  const displayHome = t('projectSettings.navbar.home');
+  const displayAbout = t('projectSettings.navbar.about');
+  const displayPartner = t('projectSettings.navbar.partner');
+  const displayNews = t('projectSettings.navbar.news');
+  const displayTraining = t('projectSettings.navbar.training');
+  const displayResources = t('projectSettings.navbar.resources');
+  const displayContact = t('projectSettings.navbar.contact');
 </script>

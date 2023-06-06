@@ -1,6 +1,25 @@
 {
   "projectSettings": {
-    "displayLogo": "true"
+    "navbar": {
+      "displayLogo": "true",
+      "home": "true",
+      "about": "true",
+      "partner": "true",
+      "news": "true",
+      "training": "true",
+      "resources": "true",
+      "contact": "true",
+      "languageChanger": "true"
+    },
+    "modules": {
+      "home": "true",
+      "about": "true",
+      "partner": "true",
+      "news": "true",
+      "training": "true",
+      "resources": "true",
+      "contact": "true"
+    }
   },
   "projectDetails": {
     "projectName": "Vue 3 Template",
