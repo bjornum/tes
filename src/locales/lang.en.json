@@ -32,11 +32,18 @@
     "news": "News",
     "training": "Training Modules",
     "resources": "Resources",
-    "contact": "Contact"
+    "contact": "Contact",
+    "changeLanguage": "Change Language"
   },
   "homePage": {
-    "mainTitle": "Welcome to Vue 3 Template",
+    "mainTitle": "Welcome to Vue 3 Template Norsk",
     "mainDescription": "Sub Page Title Comment",
+    "cardOneTitle": "Available resources",
+    "cardOneDescription": "Here you will find different resources made in the project",
+    "cardTwoTitle": "Partners",
+    "cardTwoDescription": "Find the partners, and learn more about them",
+    "cardThreeTitle": "About the project",
+    "cardThreeDescription": "Read about the project, aims and the result it will produce",
     "smallText": "The projectName aims to Lorem Ipsum Dolores Bla Bla Bla. The Concept should enable projectName to do even more Lorem Ipsum!"
   }
 }

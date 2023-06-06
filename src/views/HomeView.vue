@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- Into image, title and Subtitle -->
-    <section>
+    <section style="z-index: 1">
       <div class="card w-5/6 rounded-none text-grayText shadow-md mx-auto bg-gray-300 h-[600px]">
         <p class="text-[36px] md:text-[48px] mt-[35%] md:mt-[20%] text-[white] ml-[15%]">
           {{ $t('homePage.mainTitle') }}
@@ -15,7 +15,7 @@
     <!-- 3 Cards in center of cards -->
     <section class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div v-for="(item, index) in testArray" :key="index" class="mt-10">
+        <div v-for="(item, index) in pageCards" :key="index" class="mt-10">
           <router-link :to="item.path">
             <div
               class="card w-full bg-neutral rounded-none text-grayText shadow-md top-[-5em] right-[50] p-[10px]"
@@ -31,7 +31,7 @@
                     <i class="text-5xl pt-2 text-[#205072] mdi mdi-arrow-right"></i>
                   </div>
                   <div class="col-span-12 pa-0 px-2">
-                    <p class="text-1xl">{{ item.description }}</p>
+                    <p class="text-1xl h-10">{{ item.description }}</p>
                   </div>
                 </div>
               </div>
@@ -65,6 +65,7 @@
 
 <script setup>
   import { ref, inject } from 'vue';
+
   import { useI18n } from 'vue-i18n';
   const { t } = useI18n();
 
@@ -72,15 +73,16 @@
 
   const dividerColorArray = ref(['#205072', '#329D9C', '#D83636', '#DD9A30']);
 
-  const testArray = ref([
-    { name: '', description: 'About description', path: '/about' },
-    { name: 'Partners', description: 'Partners description', path: '/news' },
-    { name: 'Resources', description: 'Resources description', path: '/resources' },
+  const pageCards = ref([
+    { name: '', description: '', path: '/resources' },
+    { name: 'Partners', description: 'Partners description', path: '/partner' },
+    { name: 'Resources', description: 'Resources description', path: '/about' },
   ]);
 
-  // const mainDescription = ref('This is a test');
-
-  // testArray.value[0].name = mainDescription.value;
-
-  testArray.value[0].name = t('homePage.mainDescription');
+  pageCards.value[0].name = t('homePage.cardOneTitle');
+  pageCards.value[0].description = t('homePage.cardOneDescription');
+  pageCards.value[1].name = t('homePage.cardTwoTitle');
+  pageCards.value[1].description = t('homePage.cardTwoDescription');
+  pageCards.value[2].name = t('homePage.cardThreeTitle');
+  pageCards.value[2].description = t('homePage.cardThreeDescription');
 </script>

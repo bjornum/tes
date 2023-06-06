@@ -18,6 +18,10 @@
           </a>
         </div>
 
+        <div v-if="displayLanguageSelector == 'true'" class="flex-none lg:hidden mr-10">
+          <LanguageSelector />
+        </div>
+
         <!-- Sidebar Icon -->
         <div class="flex-none lg:hidden">
           <label for="my-drawer-3" class="btn btn-square btn-ghost">
@@ -64,7 +68,9 @@
             </li>
           </ul>
         </div>
-        <div v-if="languageChanger == 'true'" class="flex-none hidden lg:block mr-10">Change</div>
+        <div v-if="displayLanguageSelector == 'true'" class="flex-none hidden lg:block mr-10">
+          <LanguageSelector />
+        </div>
       </nav>
 
       <!-- Page content here -->
@@ -112,8 +118,6 @@
             <a>{{ $t('projectRoutes.contact') }}</a>
           </li>
         </section>
-
-        <div v-if="languageChanger == 'true'" class="flex-none hidden lg:block mr-10">Change</div>
       </ul>
     </nav>
   </nav>
@@ -122,6 +126,8 @@
 <script setup>
   import { ref } from 'vue';
   import { RouterLink, RouterView } from 'vue-router';
+  import LanguageSelector from '@/components/Global/LanguageSelector.vue';
+
   import { useI18n } from 'vue-i18n';
   const { t } = useI18n();
 
@@ -137,4 +143,5 @@
   const displayTraining = t('projectSettings.navbarSettings.training');
   const displayResources = t('projectSettings.navbarSettings.resources');
   const displayContact = t('projectSettings.navbarSettings.contact');
+  const displayLanguageSelector = t('projectSettings.navbarSettings.languageChanger');
 </script>
