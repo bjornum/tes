@@ -4,7 +4,15 @@
     <div class="drawer-content flex flex-col">
       <!-- Navbar -->
       <div class="w-full navbar bg-base-300">
-        <div class="flex-1 px-2 mx-2">Navbar Title</div>
+        <div class="flex-1 px-2 mx-2">
+          <img
+            src="@/assets/images/ProjectLogo.png"
+            alt="Project Logo"
+            style="max-height: 40px; width: auto"
+          />
+        </div>
+
+        <!-- Sidebar Icon -->
         <div class="flex-none lg:hidden">
           <label for="my-drawer-3" class="btn btn-square btn-ghost">
             <svg
@@ -22,6 +30,8 @@
             </svg>
           </label>
         </div>
+
+        <!-- Navbar Items on Desktop -->
         <div class="flex-none hidden lg:block">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
@@ -31,8 +41,6 @@
         </div>
       </div>
 
-      <!-- News Modal -->
-      <!-- <NewsDialog /> -->
       <!-- Page content here -->
       <RouterView />
     </div>
