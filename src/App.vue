@@ -1,11 +1,11 @@
 <template>
-  <div class="drawer">
+  <nav class="drawer">
     <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
       <!-- Navbar -->
-      <div class="w-full navbar bg-base-300">
+      <nav class="w-full navbar bg-base-300">
         <!-- Navbar Left Side Image or Name -->
-        <div class="flex-1 px-2 mx-2">
+        <div class="flex-auto px-2 mx-2">
           <a href="/">
             <img
               v-if="showImage == 'true'"
@@ -38,27 +38,81 @@
         </div>
 
         <!-- Navbar Items on Desktop -->
-        <div class="flex-none hidden lg:block">
+        <div class="flex-auto hidden lg:block">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
-            <li><a>Navbar Item 1</a></li>
-            <li><a>Navbar Item 2</a></li>
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/about">About</router-link>
+            </li>
+            <li>
+              <router-link to="/partners">Partners</router-link>
+            </li>
+            <li>
+              <router-link to="/news">News</router-link>
+            </li>
+            <li>
+              <router-link to="/training">Training Modules</router-link>
+            </li>
+            <li>
+              <router-link to="/resources">Resources</router-link>
+            </li>
+            <li><a>Contact</a></li>
           </ul>
         </div>
-      </div>
+        <div class="flex-none hidden lg:block mr-10">Change</div>
+      </nav>
 
       <!-- Page content here -->
       <RouterView />
     </div>
-    <div class="drawer-side">
+    <nav class="drawer-side">
       <label for="my-drawer-3" class="drawer-overlay"></label>
+
+      <!-- Sidebar content here -->
       <ul class="menu p-4 w-80 h-full bg-base-200">
-        <!-- Sidebar content here -->
-        <li><a>Sidebar Item 1</a></li>
-        <li><a>Sidebar Item 2</a></li>
+        <!-- Project Logo or Name -->
+        <header class="mb-5 pl-2">
+          <a href="/">
+            <img
+              v-if="showImage == 'true'"
+              src="@/assets/images/ProjectLogo.png"
+              alt="Project Logo"
+              style="max-height: 40px; width: auto"
+            />
+            <p v-if="showImage == 'false'">{{ $t('projectDetails.projectName') }}</p>
+          </a>
+        </header>
+
+        <!-- Project Navigation -->
+        <section>
+          <li>
+            <router-link to="/">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/about">About</router-link>
+          </li>
+          <li>
+            <router-link to="/partners">Partners</router-link>
+          </li>
+          <li>
+            <router-link to="/news">News</router-link>
+          </li>
+          <li>
+            <router-link to="/training">Training Modules</router-link>
+          </li>
+          <li>
+            <router-link to="/resources">Resources</router-link>
+          </li>
+          <li><a>Contact</a></li>
+        </section>
+
+        <div class="flex-none hidden lg:block mr-10">Change</div>
       </ul>
-    </div>
-  </div>
+    </nav>
+  </nav>
 </template>
 
 <script setup>
