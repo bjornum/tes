@@ -8,7 +8,8 @@
       <template v-for="language in languages">
         <li @click="setLanguage(language.code)">
           <a>
-            {{ language.name }}
+            <img :src="language.flag" class="w-6 h-6 object-contain mr-2" alt="Flag" />
+            <span>{{ language.name }} </span>
           </a>
         </li>
       </template>
@@ -18,8 +19,8 @@
 
 <script setup>
   import { ref } from 'vue';
-  import norwegianFlag from '@/assets/flags/norway.png';
-  import englishFlag from '@/assets/flags/england.png';
+  import norwegianFlag from '@/assets/flags/norwayFlag.png';
+  import englishFlag from '@/assets/flags/englandFlag.png';
 
   // Languages to select from
   const languages = ref([
