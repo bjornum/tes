@@ -93,7 +93,10 @@ npm run build
 
 <!-- Setting Up the Project --->
 <h2 align="center">Setting up the Project</h2>
-1. Find or create a .env file. The project will use from this to display:
+1. Go to the lang.en.json file, and define the settings of the Project.
+- If to show Logo or just project text in the navbar.
+
+2. Find or create a .env file. The project will use from this to display:
   - TenantID
   - Base URL
   - API Key
@@ -106,26 +109,26 @@ VITE_BASE_URL=https://app.followup.prios.no/api/
 VITE_TENANT_ID=000
 ```
 
-2. Update Netlify Variables.
+3. Update Netlify Variables.
 Should contain the same Keys given, with the values.  
 
-3. Update Project Logo
+4. Update Project Logo
 To make sure it are displayed correctly at all sections, simply replace the file named projectLogo.png with the one of your choice.
 Rename the new file to this, and all should be good to go.
 The new logo will now be displayed within the Navbar, Sidebar and Footer.
 You find this file within ###########
 
-4. Update i18n of the project.
+5. Update i18n of the project.
 Go into the english locale, and simply update atleast the general key values here, to match the new project.
 This will affect the entire page, and display new data at all important places.
 
-5. Change the project favicon.
+6. Change the project favicon.
 You need to generate the favicon by yourself.
 Good link for this, are placing project logo and run it through this page: https://www.favicon-generator.org/
 Place the new favicon within the public folder, and good to go.
 If having issues with it showing, placing a simple  . within here, can help.  (weird fix, but it works).
 
-6. Change the Page Theme
+7. Change the Page Theme
 Changing the colour theme of the page globally, to instantly make the project unique.
 - More INFO coming.
 
