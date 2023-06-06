@@ -6,6 +6,15 @@
     "projectName": "Vue 3 Template",
     "projectDescription": ""
   },
+  "projectRoutes": {
+    "home": "Home",
+    "about": "About",
+    "partner": "Partners",
+    "news": "News",
+    "training": "Training Modules",
+    "resources": "Resources",
+    "contact": "Contact"
+  },
   "homePage": {
     "mainTitle": "Welcome to Vue 3 Template",
     "mainDescription": "Sub Page Title Comment",

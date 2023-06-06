@@ -42,24 +42,26 @@
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
             <li>
-              <router-link to="/">Home</router-link>
+              <router-link to="/">{{ $t('projectRoutes.home') }}</router-link>
             </li>
             <li>
-              <router-link to="/about">About</router-link>
+              <router-link to="/about">{{ $t('projectRoutes.about') }}</router-link>
             </li>
             <li>
-              <router-link to="/partners">Partners</router-link>
+              <router-link to="/partners">{{ $t('projectRoutes.partner') }}</router-link>
             </li>
             <li>
-              <router-link to="/news">News</router-link>
+              <router-link to="/news">{{ $t('projectRoutes.news') }}</router-link>
             </li>
             <li>
-              <router-link to="/training">Training Modules</router-link>
+              <router-link to="/training">{{ $t('projectRoutes.training') }}</router-link>
             </li>
             <li>
-              <router-link to="/resources">Resources</router-link>
+              <router-link to="/resources">{{ $t('projectRoutes.resources') }}</router-link>
             </li>
-            <li><a>Contact</a></li>
+            <li>
+              <a>{{ $t('projectRoutes.contact') }}</a>
+            </li>
           </ul>
         </div>
         <div class="flex-none hidden lg:block mr-10">Change</div>
@@ -89,24 +91,26 @@
         <!-- Project Navigation -->
         <section>
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">{{ $t('projectRoutes.home') }}</router-link>
           </li>
           <li>
-            <router-link to="/about">About</router-link>
+            <router-link to="/about">{{ $t('projectRoutes.about') }}</router-link>
           </li>
           <li>
-            <router-link to="/partners">Partners</router-link>
+            <router-link to="/partners">{{ $t('projectRoutes.partner') }}</router-link>
           </li>
           <li>
-            <router-link to="/news">News</router-link>
+            <router-link to="/news">{{ $t('projectRoutes.news') }}</router-link>
           </li>
           <li>
-            <router-link to="/training">Training Modules</router-link>
+            <router-link to="/training">{{ $t('projectRoutes.training') }}</router-link>
           </li>
           <li>
-            <router-link to="/resources">Resources</router-link>
+            <router-link to="/resources">{{ $t('projectRoutes.resources') }}</router-link>
           </li>
-          <li><a>Contact</a></li>
+          <li>
+            <a>{{ $t('projectRoutes.contact') }}</a>
+          </li>
         </section>
 
         <div class="flex-none hidden lg:block mr-10">Change</div>
