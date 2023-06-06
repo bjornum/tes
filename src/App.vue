@@ -122,12 +122,11 @@
 <script setup>
   import { ref } from 'vue';
   import { RouterLink, RouterView } from 'vue-router';
-  import NewsDialog from './components/News/NewsDialog.vue';
-
   import { useI18n } from 'vue-i18n';
   const { t } = useI18n();
 
   /* =====  Navbar Settings ===== */
+
   // Show Project Logo or Project Name
   const showImage = t('projectSettings.navbar.displayLogo');
   // Display Links in Navbar
