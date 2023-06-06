@@ -1,4 +1,7 @@
 {
+  "projectSettings": {
+    "displayLogo": "true"
+  },
   "projectDetails": {
     "projectName": "Vue 3 Template",
     "projectDescription": ""

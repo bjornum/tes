@@ -4,12 +4,18 @@
     <div class="drawer-content flex flex-col">
       <!-- Navbar -->
       <div class="w-full navbar bg-base-300">
+        <!-- Navbar Left Side Image or Name -->
         <div class="flex-1 px-2 mx-2">
-          <img
-            src="@/assets/images/ProjectLogo.png"
-            alt="Project Logo"
-            style="max-height: 40px; width: auto"
-          />
+          <a href="/">
+            <img
+              v-if="showImage == 'true'"
+              src="@/assets/images/ProjectLogo.png"
+              alt="Project Logo"
+              style="max-height: 40px; width: auto"
+            />
+
+            <p v-if="showImage == 'false'">{{ $t('projectDetails.projectName') }}</p>
+          </a>
         </div>
 
         <!-- Sidebar Icon -->
@@ -56,6 +62,12 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue';
   import { RouterLink, RouterView } from 'vue-router';
   import NewsDialog from './components/News/NewsDialog.vue';
+
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
+
+  const showImage = t('projectSettings.displayLogo');
 </script>
