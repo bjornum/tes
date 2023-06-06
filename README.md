@@ -95,6 +95,7 @@ npm run build
 <h2 align="center">Setting up the Project</h2>
 1. Go to the lang.en.json file, and define the settings of the Project.
 - If to show Logo or just project text in the navbar.
+- Which modules and pages should be within the project, and alot of other things.
 
 2. Find or create a .env file. The project will use from this to display:
   - TenantID
@@ -131,6 +132,11 @@ If having issues with it showing, placing a simple  . within here, can help.  (w
 7. Change the Page Theme
 Changing the colour theme of the page globally, to instantly make the project unique.
 - More INFO coming.
+
+8. Language Selector
+It works out of the box.
+If wanting to add new flags, then simply upload them to the assets/flags/ folder.
+Make sure they are 59x59 and in png form.
 
 
 .....
