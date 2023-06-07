@@ -7,8 +7,48 @@ To have a a set of global, dynamic building blocks to utilise in the app.
 ## Component List.
 
 1. GlobalModal.vue
+   [test](https://github.com/Prios-Software-Websites/vue-3-template/tree/main/src/components/BuildingBlocks#01-globalmodalvue)
 
-[Test](./README.md)
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
+lorem ipsum
+lorem ipsum
+lorem ipsum
+
+<br/>
 
 ## 01. GlobalModal.vue
 
@@ -50,4 +90,4 @@ In the Script
 </script>
 ```
 
-Test
+Tes
