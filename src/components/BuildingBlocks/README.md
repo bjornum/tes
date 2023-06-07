@@ -47,5 +47,3 @@ In the Script
   };
 </script>
 ```
-
-Tes
