@@ -24,7 +24,7 @@
     </section>
 
     <section>
-      <NewsDialog :modalActive="modalActive" @close-modal="toggleModal">
+      <GlobalModal :modalActive="modalActive" @close-modal="toggleModal">
         <div class="text-black p-10">
           <h1 class="text-2xl mb-1">{{ newsObject.title }}</h1>
           <div class="flex justify-center">
@@ -38,7 +38,7 @@
 
           <pre>{{ newsObject }}</pre>
         </div>
-      </NewsDialog>
+      </GlobalModal>
     </section>
   </main>
 </template>
@@ -54,7 +54,7 @@
 
   // Components
   const NewsCard = defineAsyncComponent(() => import('@/components/News/NewsCard.vue'));
-  const NewsDialog = defineAsyncComponent(() => import('@/components/News/NewsDialog.vue'));
+  import GlobalModal from '@/components/BuildingBlocks/GlobalModal.vue';
 
   // Get the tenant ID from the .env file or Netlify
   const tenant = ref(import.meta.env.VITE_TENANT_ID);
