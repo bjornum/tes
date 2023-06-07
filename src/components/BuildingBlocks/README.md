@@ -8,6 +8,8 @@ To have a a set of global, dynamic building blocks to utilise in the app.
 
 1. GlobalModal.vue
 
+[Test](./README.md)
+
 ## 01. GlobalModal.vue
 
 Utilising Teleport, its only feature are to be an working Modal, which one can import and use straight away.
@@ -47,3 +49,5 @@ In the Script
   };
 </script>
 ```
+
+Test
