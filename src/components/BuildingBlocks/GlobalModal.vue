@@ -27,6 +27,8 @@
               </svg>
             </button>
             <slot />
+            <p>... {{ typeOfModal }} ...</p>
+            <p v-if="typeOfModal == 'bob'">HALLOOO</p>
             <button
               class="text-white mt-8 bg-weather-primary py-2 px-6"
               @click="$emit('close-modal')"
@@ -41,11 +43,17 @@
 </template>
 
 <script setup>
+  import { ref, watch } from 'vue';
+
   defineEmits(['close-modal']);
   defineProps({
     modalActive: {
       type: Boolean,
       default: false,
+    },
+    typeOfModal: {
+      type: String,
+      default: 'default',
     },
   });
 </script>

@@ -1,6 +1,6 @@
 <template>
   <a @click="toggleModal()">{{ $t('projectRoutes.contact') }}</a>
-  <GlobalModal :modalActive="modalActive" @close-modal="toggleModal">
+  <GlobalModal :modalActive="modalActive" @close-modal="toggleModal" :typeOfModal="typeOfModal">
     <div class="text-black p-2">
       <h1 class="text-2xl font-semibold">Contact Us</h1>
 
@@ -58,6 +58,7 @@
   import GlobalModal from '@/components/BuildingBlocks/GlobalModal.vue';
 
   const modalActive = ref(null);
+  const typeOfModal = ref('bob');
 
   const toggleModal = () => {
     modalActive.value = !modalActive.value;

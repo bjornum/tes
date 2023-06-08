@@ -30,7 +30,7 @@
                   <div class="col-span-2 pl-0">
                     <i class="text-5xl pt-2 text-[#205072] mdi mdi-arrow-right"></i>
                   </div>
-                  <div class="col-span-12 pa-0 px-2">
+                  <div class="col-span-12 pa-0">
                     <p class="text-1xl h-10">{{ item.description }}</p>
                   </div>
                 </div>
