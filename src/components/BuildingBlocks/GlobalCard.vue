@@ -1,5 +1,6 @@
 <template>
   <div class="card w-full bg-neutral rounded-none text-grayText shadow-md">
+    <!-- Image -->
     <figure class="w-full h-40">
       <img :src="image" alt="Shoes" class="w-full h-full object-cover" />
     </figure>
@@ -15,20 +16,6 @@
           <p v-if="videoCount">{{ videoCount }} Videoer</p>
           <p v-if="partnerSince">Partner siden {{ partnerSince }}</p>
           <p v-if="websiteUrl">{{ websiteUrl }}</p>
-        </div>
-        <div :class="[hasCountSinceUrl ? 'ml-auto mt-auto' : '']" class="mt-2" v-if="showCardArrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="w-6 h-6 text-white"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
-              clip-rule="evenodd"
-            />
-          </svg>
         </div>
       </div>
     </div>
@@ -52,6 +39,14 @@
 </template>
 
 <script setup>
+  /*
+    This is where the magic happens.
+    You pass the value down into the card, and the card will adjust based on what you send in.
+    Try to keep the props as simple as possible, and let the card do the heavy lifting.
+    If something is called location in the card, call it location here.
+    But if something is called name, think about giving it the key title for example if able.
+      - This to make sure that the card is as reusable as possible.
+  */
   const props = defineProps({
     title: String,
     description: String,
@@ -74,6 +69,7 @@
     },
   });
 
+  // Example if needing to run more functionalities here.
   const hasMoreDetails = !!props.email || !!props.phonenumber;
   const hasCountSinceUrl = !!props.videoCount || !!props.partnerSince || !!props.websiteUrl;
 </script>

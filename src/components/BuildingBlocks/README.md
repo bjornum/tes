@@ -3,10 +3,12 @@
 ## Idea:
 
 To have a a set of global, dynamic building blocks to utilise in the app.
+Idea are to use 1 Global Component, and have it re-usable while fully customisable.
 
 ## Component List.
 
 1. [GlobalModal.vue](https://github.com/Prios-Software-Websites/vue-3-template/tree/main/src/components/BuildingBlocks#01-globalmodalvue)
+2. GlobalCard.vue
 
 ## 01. GlobalModal.vue
 
@@ -47,3 +49,9 @@ In the Script
   };
 </script>
 ```
+
+## 02. GlobalCard.vue
+
+An Generic Card, which accept multiple Props sent from the parent.
+Use it as a singular tag, and pass in the values.
+Make sure that they are written within the component, otherwise adjust it as such.

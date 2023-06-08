@@ -7,8 +7,8 @@ Will display 6 news on Frontpage, and ALL news on News Page.
 
 ## Components
 
-1.  MainNewsPage.vue
-2.  NewsCard.vue
+1. MainNewsPage.vue
+2. GlobalCard.vue
 
 ## Pages Used
 

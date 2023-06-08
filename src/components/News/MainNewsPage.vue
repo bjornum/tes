@@ -3,7 +3,7 @@
     <section class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <template v-for="(news, newsIndex) in newsData" :key="newsIndex">
-          <NewsCard
+          <GlobalCard
             :title="news.title"
             :image="news.media_url"
             :thumbnail="news.thumbnail_url"
@@ -53,7 +53,9 @@
   const route = useRoute();
 
   // Components
-  const NewsCard = defineAsyncComponent(() => import('@/components/News/NewsCard.vue'));
+  const GlobalCard = defineAsyncComponent(() =>
+    import('@/components/BuildingBlocks/GlobalCard.vue')
+  );
   import GlobalModal from '@/components/BuildingBlocks/GlobalModal.vue';
 
   // Get the tenant ID from the .env file or Netlify
