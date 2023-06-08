@@ -16,9 +16,6 @@
           <p v-if="partnerSince">Partner siden {{ partnerSince }}</p>
           <p v-if="websiteUrl">{{ websiteUrl }}</p>
         </div>
-        <!-- <div :class="[hasCaptions ? 'ml-auto' : '']" v-if="showCardButton">
-          <button class="btn btn-secondary rounded-none text-white normal-case">Se nå</button>
-        </div> -->
         <div :class="[hasCountSinceUrl ? 'ml-auto mt-auto' : '']" class="mt-2" v-if="showCardArrow">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +74,6 @@
     },
   });
 
-  const hasCaptions = !!props.partnerName || !!props.location;
   const hasMoreDetails = !!props.email || !!props.phonenumber;
   const hasCountSinceUrl = !!props.videoCount || !!props.partnerSince || !!props.websiteUrl;
 </script>
