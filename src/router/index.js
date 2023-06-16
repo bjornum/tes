@@ -6,6 +6,7 @@ import NewsView from '../views/NewsView.vue';
 import OutputView from '../views/OutputView.vue';
 import PartnerView from '../views/PartnerView.vue';
 import ResourceView from '../views/ResourceView.vue';
+import DevelopmentView from '../views/DevelopmentView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,8 +16,9 @@ const router = createRouter({
     { path: '/mapping', name: 'mapping', component: MappingView },
     { path: '/news', name: 'news', component: NewsView },
     { path: '/outputs', name: 'outputs', component: OutputView },
-    { path: '/partner', name: 'partners', component: PartnerView },
+    { path: '/partners', name: 'partners', component: PartnerView },
     { path: '/resources', name: 'resources', component: ResourceView },
+    { path: '/dev', name: 'development', component: DevelopmentView },
   ],
 });
 

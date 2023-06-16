@@ -58,7 +58,7 @@
               <router-link to="/news">{{ $t('projectRoutes.news') }}</router-link>
             </li>
             <li v-if="displayTraining == 'true'">
-              <router-link to="/training">{{ $t('projectRoutes.training') }}</router-link>
+              <router-link to="/mapping">{{ $t('projectRoutes.training') }}</router-link>
             </li>
             <li v-if="displayResources == 'true'">
               <router-link to="/resources">{{ $t('projectRoutes.resources') }}</router-link>
@@ -109,7 +109,7 @@
             <router-link to="/news">{{ $t('projectRoutes.news') }}</router-link>
           </li>
           <li v-if="displayTraining == 'true'">
-            <router-link to="/training">{{ $t('projectRoutes.training') }}</router-link>
+            <router-link to="/mapping">{{ $t('projectRoutes.training') }}</router-link>
           </li>
           <li v-if="displayResources == 'true'">
             <router-link to="/resources">{{ $t('projectRoutes.resources') }}</router-link>
