@@ -6,8 +6,8 @@
       "about": "true",
       "partner": "true",
       "news": "true",
-      "training": "true",
-      "resources": "false",
+      "training": "false",
+      "resources": "true",
       "contact": "false",
       "languageChanger": "true"
     },
