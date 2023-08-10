@@ -31,6 +31,22 @@
       </div>
     </template>
   </section>
+
+  <section>
+    <button class="btn" @click="buyProducts()">BUY NOW</button>
+  </section>
+
+  <section class="p-10">
+    <h1>Arkiv</h1>
+    <template v-for="archivedproduct in archivedProducts" :key="archivedproduct.id">
+      <div class="card" style="border: solid hotpink 2px">
+        <p class="text-center" style="font-size: 30px">{{ archivedproduct.name }}</p>
+        <p>Price: {{ archivedproduct.price }}</p>
+        <p>Description: {{ archivedproduct.price }}</p>
+        <pre>{{ archivedproduct }}</pre>
+      </div>
+    </template>
+  </section>
 </template>
 
 <script setup>
@@ -125,4 +141,44 @@
     localStorage.removeItem('cart');
     window.location.reload();
   };
+
+  // Buy all products in cart, push these into archive array in localStorage with current date and time and remove cart from localStorage
+  const buyProducts = () => {
+    const cartArray = JSON.parse(localStorage.getItem('cart'));
+    const archiveArray = JSON.parse(localStorage.getItem('archive'));
+    const date = new Date();
+    // get current date and time and format it
+    const dateAndTime = `${date.getDate()}/${
+      date.getMonth() + 1
+    }/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    // create object to push into archive array
+    const archiveObject = {
+      date: dateAndTime,
+      products: cartArray,
+    };
+    // check if archive array exists in localStorage
+    if (localStorage.getItem('archive')) {
+      archiveArray.push(archiveObject);
+      localStorage.setItem('archive', JSON.stringify(archiveArray));
+    } else {
+      localStorage.setItem('archive', JSON.stringify([archiveObject]));
+    }
+    // remove cart from localStorage
+    localStorage.removeItem('cart');
+    // reload page (can run a trigger instead if wanting to, just call for the getArchivedProducts function)
+    window.location.reload();
+  };
+
+  // Will contain all Archived entries from localstorage archive
+  const archivedProducts = ref([]);
+
+  // Get archive array from localStorage and place into archivedProducts array
+  const getArchivedProducts = () => {
+    if (localStorage.getItem('archive')) {
+      archivedProducts.value = JSON.parse(localStorage.getItem('archive'));
+    }
+  };
+
+  // Run the Function afterward to get ALL archived products
+  getArchivedProducts();
 </script>

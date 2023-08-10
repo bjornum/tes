@@ -3,7 +3,7 @@
     <label tabindex="0" class="btn btn-ghost rounded-btn" for="">Change Language</label>
     <ul
       tabindex="0"
-      class="menu dropdown-content p-2 shadow bg-base-300 rounded-box w-52 mt-4 z-10"
+      class="menu dropdown-content p-2 shadow bg-base-300 rounded-box w-52 mt-4 z-50"
     >
       <template v-for="language in languages">
         <li @click="setLanguage(language.code)">
@@ -21,6 +21,7 @@
   import { ref } from 'vue';
   import norwegianFlag from '@/assets/flags/norwayFlag.png';
   import englishFlag from '@/assets/flags/englandFlag.png';
+  import bulgariaFlag from '@/assets/flags/bulgariaFlag.png';
 
   // Languages to select from
   const languages = ref([
@@ -28,6 +29,11 @@
       name: 'English',
       code: 'en',
       flag: englishFlag,
+    },
+    {
+      name: 'Bulgaria',
+      code: 'bg',
+      flag: bulgariaFlag,
     },
     {
       name: 'Norsk',

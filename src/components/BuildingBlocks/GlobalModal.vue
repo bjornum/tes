@@ -4,9 +4,15 @@
       <div
         v-show="modalActive"
         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+        style="overflow: auto"
       >
         <Transition name="modal-inner">
-          <div v-if="modalActive" class="relative p-4 bg-white max-w-screen-md w-[50%] rounded-lg">
+          <!-- If type of modal are image, then full screen of it -->
+          <div
+            class="relative p-4 rounded-lg my-auto pt-10"
+            style="background-color: #2f2f2f"
+            :class="typeOfModal === 'image' ? 'w-[100%] md:w-[75%]' : 'w-[100%] md:w-[50%]'"
+          >
             <button
               class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
               @click="$emit('close-modal')"
@@ -27,8 +33,6 @@
               </svg>
             </button>
             <slot />
-            <p>... {{ typeOfModal }} ...</p>
-            <p v-if="typeOfModal == 'bob'">HALLOOO</p>
             <button
               class="text-white mt-8 bg-weather-primary py-2 px-6"
               @click="$emit('close-modal')"

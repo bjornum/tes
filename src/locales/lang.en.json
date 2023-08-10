@@ -7,8 +7,8 @@
       "partner": "true",
       "news": "true",
       "training": "true",
-      "resources": "true",
-      "contact": "true",
+      "resources": "false",
+      "contact": "false",
       "languageChanger": "true"
     },
     "modules": {
@@ -35,15 +35,56 @@
     "contact": "Contact",
     "changeLanguage": "Change Language"
   },
+  "footer": {
+    "disclaimer": "The project is supported by a grant from Iceland, Liechtenstein and Norway through the EEA Grants Bulgaria 2014-2021, in the frame of the Programme Business Development, Innovation and SMEs, Bulgaria "
+  },
   "homePage": {
-    "mainTitle": "Welcome to Vue 3 Template Norsk",
-    "mainDescription": "Sub Page Title Comment",
+    "mainTitle": "CNIPEG: Carbon Neutrality and Increased Energy Productivity of SMEs in Gabrovo and Gabrovo Region",
+    "mainDescription": "Billateral partnership under the EEA Grants Programme Business Development, Innovation and SMEs, Bulgaria",
     "cardOneTitle": "Available resources",
     "cardOneDescription": "Here you will find different resources made in the project",
     "cardTwoTitle": "Partners",
     "cardTwoDescription": "Find the partners, and learn more about them",
     "cardThreeTitle": "About the project",
     "cardThreeDescription": "Read about the project, aims and the result it will produce",
-    "smallText": "The projectName aims to Lorem Ipsum Dolores Bla Bla Bla. The Concept should enable projectName to do even more Lorem Ipsum!"
+    "smallText": "'Carbon Neutrality and Increased Energy Productivity of SMEs in Gabrovo and Gabrovo Region' is a  project which aims to support SMEs from Gabrovo and Gabrovo region in their effort to improve their carbon neutrality and achieve increased energy productivity. The project will result in the development of a training program, guidelines, self-assessment tool and consultancy package for the needs of the SMEs. The aim is to develop comprehensive resources and mentoring support system tailored specifically to the needs of these businesses. The project's core focus lies in two crucial areas: reducing carbon emissions and increasing energy productivity. By addressing these key aspects, the initiative endeavors to empower SMEs, guiding them toward sustainable practices and enhanced efficiency. Furthermore, the project holds a vision of fostering bilateral relationships between SMEs in the Gabrovo region of Bulgaria and Trøndelag, Norway. This collaboration aims to create a platform for knowledge exchange and mutual growth, nurturing a stronger and more interconnected business community. "
+  },
+  "aboutPage": {
+    "aboutTheProject": "The CNIPEG project is an initiative aimed at helping SMEs in Gabrovo and the surrounding area enhance their energy productivity and achieve carbon neutrality. The project seeks to increase awareness, develop capacities, and provide practical tools and services to help SMEs transition to a circular economy and improve their environmental performance. With the generous support of EEA Grants and Norway Grants, the project fosters a bilateral partnership between Bulgaria and Norway, by creating opportunities for knowledge exchange and collaboration. By empowering SMEs and strengthening the Gabrovo Chamber of Commerce and Industry, CNIPEG aims to create a thriving and sustainable business ecosystem while contributing to the region's economic growth, climate resilience, and the realization of Gabrovo Municipality's vision for a green and innovative future.",
+    "goalsOfTheProject": "With a focus on energy productivity and carbon neutrality, the project strives to increase awareness and among SMEs about the socio-economic benefits of adopting environmentally friendly practices. By providing training and capacity-building initiatives, CNIPEG aims to equip SMEs in Gabrovo with the necessary knowledge and tools to achieve carbon neutrality and enhance their energy productivity. The project recognizes the crucial role of SMEs in driving economic growth and aims to support their transition towards sustainable business practices. With the generous support of EEA Grants the project aims to create a bilateral partnership between Norway and Bulgaria to foster knowledge exchange and collaboration in the pursuit of a greener future. In addition to empowering SMEs, CNIPEG also aims to enhance the capacity of the Gabrovo Chamber of Commerce and Industry (GCCI) to effectively assist SMEs in their sustainability journey. By providing specialized training and resources to the GCCI staff, the project aims to enable them to provide valuable guidance and support to SMEs in Gabrovo and Gabrovo Region. This capacity-building initiative at the GCCI will strengthen the local ecosystem and ensure the long-term sustainability of the project's impact. Through this collaborative effort, the CNIPEG project aspires to support the development of a sustainable business environment in Gabrovo, where SMEs can thrive while contributing to the preservation of the environment and the well-being of the community.",
+    "whoTheProjectIsFor": "For decades, Gabrovo has played and continues to play the role of an industrial heart in Bulgaria. It has been home to notoriously resourceful entrepreneurs for over 150 years. Although entrepreneurs and business owners in the region have proven their resilience, we are currently facing unprecedented challenges in these times, with climate change being one of them. There is a rapidly growing pressure on SMEs in the region from both legislation and clients. The project aims to assist SMEs in Gabrovo and the Gabrovo region in building stronger capacity to improve their carbon emission and energy productivity metrics. SME management often works under pressure and oversees the entire operations of the entity, leaving little time and effort to self-educate on climate change and its potential impact on their business. This project strives to develop comprehensible, insightful, and user-friendly tools and services to help SME staff achieve their environmental goals. Furthermore, the project results can also be used by SMEs in Bulgaria and Norway, extending the reach of the initiative beyond Gabrovo and the immediate region.",
+    "whyOfTheProject": "The development of the CNIPEG project is driven by several key factors and aligns with Bulgaria's strategic initiatives for a circular economy. The country has developed strategic documents such as the National Development Program: Bulgaria 2030, Innovation Strategy for Smart Specialization, National Waste Management Plan, and the Strategy and Action Plan for Transition to Circular Economy. These documents emphasize the importance of SMEs transitioning to a circular economy. In line with these national strategies, Gabrovo Municipality has set a vision for sustainable development, aiming to become a green, innovative, and accessible municipality with a focus on cultural heritage and sustainable tourism. The municipality's Plan for Integrated Development 2021-2027 highlights the need for economic measures, including the development of carbon-neutral industrial parks and the creation of job opportunities in the area. Gabrovo, known for its significant presence in machine engineering, textile and clothing, rubber and plastics production, food and beverages, and furniture industries, faces the challenge of lower energy productivity compared to the EU average. Eurostat data reveals that Bulgaria has one of the lowest energy productivities in the EU, with a rate of 2 EUR/KGOE compared to the EU average of 8.6 EUR/KGOE. Considering that machine engineering constitutes nearly 40% of the production in the Gabrovo area, a sector known for its high energy consumption, there is a pressing need for SMEs in the region to improve their energy productivity. The CNIPEG project aims to address this issue by supporting SMEs in Gabrovo and the surrounding area in enhancing their energy efficiency and adopting sustainable practices. By doing so, the project seeks to contribute to the region's economic development, adaptation to climate change, and the realization of the municipality's green and innovative vision outlined in the Plan for Integrated Development.",
+    "badgeOne": "Energy Productivity",
+    "badgeTwo": "Climate Neutrality",
+    "badgeThree": "SME",
+    "badgeFour": "Circular Economy",
+    "badgeFive": "Suitainable Business",
+    "badgeSix": "Gabrovo",
+    "badgeSeven": "Transition",
+    "badgeEight": "Training",
+    "badgeNine": "Bilateral",
+    "badgeTen": "Norway",
+    "badgeEleven": "Bulgaria",
+    "badgeTwelve": "EEA",
+    "badgeThirteen": "Grants",
+    "badgeFourteen": "Norway Grants",
+    "aboutImage": "",
+    "goalsImage": "",
+    "whoImage": "",
+    "whyImage": ""
+  },
+  "partnerPage": {
+    "partnerOne": {
+      "title": "Gabrovo Chamber of Commerce and Industry",
+      "link": "",
+      "description": "Established in 1991, the Gabrovo Chamber of Commerce and Industry (GCCI) is an autonomous legal entity, registered in public benefit under the Bulgarian law of non-profit legal entities. Its main mission is  supporting the regional development, representation and protection of its members’ interest before the municipal and governmental institutions, and stimulating the European and international integration of Gabrovo Region. The Chamber takes an active role in promoting the economic development in the region and promotion of the region itself. The members of the organization participate in working groups for development and updating of the regional strategy for development, the municipal plans for development, and other programmes and projects in relation to the economic growth of the region.       In recent years the Chamber works for promotion of innovations, digitalization of the industry (Industry 4.0), circular economy and turning Gabrovo Region into the technological heart of Bulgaria. Together with Gabrovo Municipality the Chamber assisted the creation of the  Regional center for Innovations (RIC) and is currently a member of the organization",
+      "logo": ""
+    },
+    "partnerTwo": {
+      "title": "Prios Kompetanse AS",
+      "link": "https://www.prios.no/en-gb",
+      "description": " PRIOS is a Norwegian adult learning center, operating since 2016. Business model development for further (green) innovation, green energy prospect for shipyards, Digital transmission for SMEs, Digital marketing (also for SMEs) are among the topics included in its training package. Apart from the educational activities focused on adult learners and provision of VET, entrepreneurship and business training, PRIOS offers a range of tailor-made services such as business consultations, software development, development of new digital solutions. PRIOS consulting activities support companies in introducing internal innovations and enhancing their efficiency and performance.",
+      "logo": ""
+    }
   }
 }

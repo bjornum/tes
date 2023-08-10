@@ -17,7 +17,7 @@
             :ID="news.id"
             :showCardButton="true"
             class="mb-8 md:mb-0 cursor-pointer"
-            @click="toggleModal(news)"
+            @click="getNewsData(news)"
           />
         </template>
       </div>
@@ -25,18 +25,71 @@
 
     <section>
       <GlobalModal :modalActive="modalActive" @close-modal="toggleModal">
-        <div class="text-black p-10">
-          <h1 class="text-2xl mb-1">{{ newsObject.title }}</h1>
+        <div class="p-10 text-grayText">
+          <h1 class="text-2xl mb-5">{{ newsObject.title }}</h1>
           <div class="flex justify-center">
             <img
               :src="newsObject.media_url"
               :alt="newsObject.title"
               style="max-height: 200px; width: auto"
+              @click="toggleImageModal(newsObject.media_url)"
             />
           </div>
           <p v-html="newsObject.description" class="pl-5 pb-5 mb-0 pt-10"></p>
 
-          <pre>{{ newsObject }}</pre>
+          <div style="display: flex; flex-wrap: wrap">
+            <div
+              v-for="item in newsDataContent"
+              :key="item.id"
+              style="padding: 5px"
+              :style="{ 'flex-basis': (parseInt(item.widthClass.split('-')[2]) / 12) * 100 + '%' }"
+            >
+              <div class="grid grid-cols-auto">
+                <div :class="item.widthClass + (item.widthClass === 'col-span-6' ? ' w-full' : '')">
+                  <div v-if="item.type == 'text'">
+                    <p v-html="item.content"></p>
+                  </div>
+                  <div v-if="item.type == 'image'">
+                    <img
+                      :src="item.content"
+                      alt=""
+                      style="object-fit: cover"
+                      @click="toggleImageModal(item.content)"
+                    />
+                  </div>
+                  <div v-if="item.type == 'youtube_video'">
+                    <iframe
+                      :src="item.content"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      style="width: 100%; height: 400px"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </GlobalModal>
+    </section>
+
+    <!-- ===== Image Modal ===== -->
+    <section>
+      <GlobalModal
+        :modalActive="imageModalActive"
+        @close-modal="toggleImageModal"
+        :typeOfModal="typeOfModal"
+      >
+        <div class="p-10 text-grayText">
+          <div class="flex justify-center">
+            <img
+              @click="closeModal(false)"
+              :src="imageObject"
+              alt="News Image"
+              style="max-height: auto; width: auto"
+            />
+          </div>
         </div>
       </GlobalModal>
     </section>
@@ -66,6 +119,8 @@
 
   // Get the data from the API
   const newsData = ref([]);
+
+  const newsDataContent = ref([]);
 
   // Get all news
   const getAllNews = async () => {
@@ -109,15 +164,63 @@
     }
   });
 
+  // Get ALL data from news clicked
+  const getNewsData = async (news) => {
+    newsObject.value = news;
+
+    try {
+      const response = await axios.get(
+        `resource_management/news_content?mode=getpublicnews&news_id=${news.id}`
+      );
+      const data = response.data;
+      console.log(data);
+
+      // Create a new array with width classes
+      const newData = data.map((item) => {
+        if (item.class_list) {
+          const xsWidth = parseInt(item.class_list.split('xs')[1], 10);
+          // const widthClass = `w-${xsWidth}/12`;
+          const widthClass = `col-span-${xsWidth}`;
+          return { ...item, widthClass };
+        }
+        return item;
+      });
+
+      newsDataContent.value = newData;
+      toggleModal(newsDataContent.value, newsData.value);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   /* ===== modal script ===== */
 
   const modalActive = ref(null);
   const newsObject = ref({});
 
   const toggleModal = (news) => {
-    newsObject.value = news;
     modalActive.value = !modalActive.value;
     if (modalActive.value) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+  };
+
+  /* ===== image modal script ===== */
+
+  const imageModalActive = ref(false);
+  const imageObject = ref({});
+  const typeOfModal = ref('image');
+
+  const closeModal = (state) => {
+    imageModalActive.value = state;
+  };
+
+  const toggleImageModal = (image) => {
+    imageObject.value = image;
+    imageModalActive.value = !imageModalActive.value;
+    if (imageModalActive.value) {
       document.body.classList.add('modal-open');
     } else {
       document.body.classList.remove('modal-open');

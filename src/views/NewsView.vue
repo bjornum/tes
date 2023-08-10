@@ -1,5 +1,7 @@
 <template>
-  <h1 className="text-3xl font-bold underline">{{ pageTitle }}</h1>
+  <h1 className="text-3xl font-bold underline mt-[10%] md:mt-[5%] text-center mb-10">
+    {{ pageTitle }}
+  </h1>
   <NewsPage />
 </template>
 

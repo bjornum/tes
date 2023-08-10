@@ -1,19 +1,50 @@
 <template>
-  <main>
+  <main class="mt-[5%]">
     <!-- Into image, title and Subtitle -->
-    <section style="z-index: 1">
+    <!-- <section style="z-index: 1">
       <div class="card w-5/6 rounded-none text-grayText shadow-md mx-auto bg-gray-300 h-[600px]">
-        <p class="text-[36px] md:text-[48px] mt-[35%] md:mt-[20%] text-[white] ml-[15%]">
+        <p class="text-[36px] md:text-[48px] mt-[35%] md:mt-[10%] text-[white] ml-[15%]">
           {{ $t('homePage.mainTitle') }}
         </p>
-        <p class="text-[18px] md:text-[28px] text-[#434343;] ml-[15%] font-bold">
+        <p class="text-[18px] md:text-[28px] text-[#434343;] ml-[15%] mt-10 font-bold">
           {{ $t('homePage.mainDescription') }}
         </p>
+      </div>
+    </section> -->
+
+    <!-- <section class="relative z-10 bg-cover bg-center">
+      <div
+        class="card w-5/6 rounded-none text-grayText shadow-md mx-auto h-[600px] bg-[url('@/assets/images/evolvebackground.jpg')]"
+      >
+        <p class="text-[36px] md:text-[48px] mt-[35%] md:mt-[10%] text-[white] ml-[15%]">
+          {{ $t('homePage.mainTitle') }}
+        </p>
+        <p class="text-[18px] md:text-[28px] text-[#434343;] ml-[15%] mt-10 font-bold">
+          {{ $t('homePage.mainDescription') }}
+        </p>
+      </div>
+    </section> -->
+
+    <section class="relative z-10 bg-cover bg-center">
+      <div class="card w-5/6 rounded-none text-grayText shadow-md mx-auto h-[700px] relative z-20">
+        <img
+          class="object-cover absolute inset-0 w-full h-full"
+          src="@/assets/images/evolvebackground.jpg"
+          alt=""
+        />
+        <div class="p-[10%] z-30">
+          <p class="text-[36px] md:text-[48px] text-white">
+            {{ $t('homePage.mainTitle') }}
+          </p>
+          <p class="text-[18px] md:text-[28px] text-white mt-10 font-bold">
+            {{ $t('homePage.mainDescription') }}
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- 3 Cards in center of cards -->
-    <section class="container mx-auto px-4">
+    <section class="container mx-auto px-4 -mt-20 relative z-30">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div v-for="(item, index) in pageCards" :key="index" class="mt-10">
           <router-link :to="item.path">
@@ -44,14 +75,14 @@
     <p>{{ name }}</p>
 
     <!-- Info Text -->
-    <section class="container mx-auto px-4 w-1/4 mb-10">
+    <section class="container mx-auto px-4 w-3/4 mb-10">
       <p class="mb-15 pt-0 mt-0 text-center text-[#6A6A6A] font-normal text-2xl">
         {{ $t('homePage.smallText') }}
       </p>
     </section>
 
     <!-- Import News Module here -->
-    <section>
+    <section v-if="displayNews == 'true'">
       <NewsModule />
     </section>
 
@@ -69,14 +100,16 @@
   import { useI18n } from 'vue-i18n';
   const { t } = useI18n();
 
+  const displayNews = t('projectSettings.navbarSettings.news');
+
   import NewsModule from '@/components/News/MainNewsPage.vue';
 
   const dividerColorArray = ref(['#205072', '#329D9C', '#D83636', '#DD9A30']);
 
   const pageCards = ref([
     { name: '', description: '', path: '/resources' },
-    { name: 'Partners', description: 'Partners description', path: '/partner' },
-    { name: 'Resources', description: 'Resources description', path: '/about' },
+    { name: '', description: '', path: '/partners' },
+    { name: '', description: '', path: '/about' },
   ]);
 
   pageCards.value[0].name = t('homePage.cardOneTitle');
