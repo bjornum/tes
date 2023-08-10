@@ -18,10 +18,14 @@
 <br>
 <br>
 
+<p>WORK IN PROGRESS</p>
+
 <!-- Project Description --->
 <p> An re-usable template project, used to quickly set up new project pages. </p>
 <p> With a few minor changed, you will have an unique project created. </p>
 <p> Fully customisable for the partners need. </p>
+
+
 
 <br>
 <br>
