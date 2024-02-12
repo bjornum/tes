@@ -11,6 +11,7 @@
     "@mdi/font": "^7.2.96",
     "axios": "^1.4.0",
     "daisyui": "^3.0.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.31.0",
     "pinia": "^2.0.36",
     "vue": "^3.3.2",
     "vue-i18n": "^9.2.2",
